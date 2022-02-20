@@ -22,7 +22,7 @@
         };
         let maintail;
         if (!QDisVIP()) {
-            maintail = document.querySelector(".admire-wrap");
+            maintail = document.querySelector("#chapterContent a");
         } else {
             maintail = document.querySelector("#chapterContent a");
         }
@@ -255,11 +255,9 @@
             }
             let readLoadNext = document.querySelector("#readLoadNext");
             if (readLoadNext) {
-                let a;
-                do {
-                    a = readLoadNext.querySelector("a");
-                    if (a) readLoadNext.removeChild(a);
-                } while (a != null);
+                let a = readLoadNext.querySelector("#aGotoBookEnd");
+                if (a) readLoadNext.removeChild(a);
+
             }
         }
         QDsetContent(content);
@@ -321,13 +319,13 @@
     };
 
     function mainFunction() {
-        let chapterNext = document.getElementById("j_chapterNext");
+        let chapterNext = document.getElementById("#readLoadNext a");
         if (chapterNext) {
-            let href = chapterNext.getAttribute("href");
+            // @ts-ignore
+            let href = g_data.endUrl.replace('end', g_data.chapter.next);
             if (href) {
                 nextpage.qdurl = href;
             }
-            chapterNext.removeAttribute("href");
             chapterNext.setAttribute("onclick", "window.next()");
         }
         prelaunch();
