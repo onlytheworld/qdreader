@@ -319,7 +319,7 @@
     };
 
     function mainFunction() {
-        let chapterNext = document.getElementById("#readLoadNext a");
+        let chapterNext = document.querySelector("#readLoadNext a");
         if (chapterNext) {
             // @ts-ignore
             let href = g_data.endUrl.replace('end', g_data.chapter.next);
