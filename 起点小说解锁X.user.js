@@ -324,7 +324,7 @@
             // @ts-ignore
             let href = g_data.endUrl.replace('end', g_data.chapter.next);
             if (href) {
-                nextpage.qdurl = href;
+                nextpage.qdurl = 'https:' + href;
             }
             chapterNext.setAttribute("onclick", "window.next()");
         }
