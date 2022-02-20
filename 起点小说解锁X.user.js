@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         起点小说解锁X
-// @version      1.1
+// @version      1.1.1
 // @description  可解锁起点小说VIP付费章节，可点击下一页实现不翻页加载
 // @author       落雪霜林
 // @match        https://m.qidian.com/book/*
@@ -322,7 +322,7 @@
         let chapterNext = document.querySelector("#readLoadNext a");
         if (chapterNext) {
             // @ts-ignore
-            let href = g_data.endUrl.replace('end', g_data.chapter.next);
+            let href = g_data.endUrl.replace('end/', g_data.chapter.next);
             if (href) {
                 nextpage.qdurl = 'https:' + href;
             }
