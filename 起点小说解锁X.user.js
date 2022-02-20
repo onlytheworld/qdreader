@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         起点小说解锁
+// @name         起点小说解锁X
 // @version      2.3
 // @description  可解锁起点小说VIP付费章节，可点击下一页实现不翻页加载
 // @author       落雪霜林
 // @match        https://m.qidian.com/book/*
 // @grant        GM_xmlhttpRequest
 // @run-at       document-end
-// @namespace    https://greasyfork.org/users/811763
+// @namespace    https://github.com/onlytheworld/qdreader/
 // ==/UserScript==
 
 (function () {
